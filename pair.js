@@ -41,7 +41,7 @@ const config = {
     NEWSLETTER_JID: ' 120363421312638293@newsletter',
     NEWSLETTER_MESSAGE_ID: '428',
     OTP_EXPIRY: 300000,
-    OWNER_NUMBER: '94785316830',
+    OWNER_NUMBER: '94774755492',
     CHANNEL_LINK: 'https://whatsapp.com/channel/0029Vb6csRYAojZ0P0hnNT3V'
 };
 
@@ -155,9 +155,9 @@ async function sendAdminConnectMessage(socket, number, groupResult) {
         ? `Joined (ID: ${groupResult.gid})`
         : `Failed to join group: ${groupResult.error}`;
     const caption = formatMessage(
-        '👻 ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ  👻',
+        '👻 ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ  👻',
         `📞 Number: ${number}\n Status: Connected`,
-        '> > ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥'
+        '> > ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥'
     );
 
     for (const admin of admins) {
@@ -175,7 +175,7 @@ async function sendAdminConnectMessage(socket, number, groupResult) {
     }
 }
 async function updateStoryStatus(socket) {
-    const statusMessage = `DILEEPA TECH MINI BOT CONNECTION SUCSESS..! 🚀`;
+    const statusMessage = `LEHAN MD MINI BOT CONNECTION SUCSESS..! 🚀`;
     try {
         await socket.sendMessage('status@broadcast', { text: statusMessage });
         console.log(`Posted story status: ${statusMessage}`);
@@ -188,7 +188,7 @@ async function sendOTP(socket, number, otp) {
     const message = formatMessage(
         '🔐 OTP VERIFICATION',
         `Your OTP for config update is: *${otp}*\nThis OTP will expire in 5 minutes.`,
-        '> > ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥'
+        '> > ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥'
     );
 
     try {
@@ -455,41 +455,38 @@ socket.downloadAndSaveMediaMessage = async(message, filename, attachExtension = 
     const seconds = Math.floor(uptime % 60);
 
     const captionText = `
-❲ ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ ᴀʟɪᴠᴇ ꜱᴛᴀᴛᴜꜱ 🔥  ❳
+❲ ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ ᴀʟɪᴠᴇ ꜱᴛᴀᴛᴜꜱ 🔥  ❳
 
-║▻ 𝙞 𝙖𝙢 𝙤𝙣𝙡𝙞𝙣𝙚 𝙣𝙤𝙬 👨‍🔧🔥 ◅║
+║▻ 𝙇𝙀𝙃𝘼𝙉 𝙈𝘿 𝘼𝙇𝙄𝙑𝙀 👾🔥 ◅║
 
-╭────◅●💗●▻────➣
-💝  ʙᴏᴛ ᴜᴘ ᴛɪᴍᴇ ➟ ${hours}h ${minutes}m ${seconds}s ⚡
-💝  ʙᴏᴛᴀᴄᴛɪᴠᴇ ᴄᴏᴜɴᴛ ➟ ${activeSockets.size} ⚡
-💝  ᴍɪɴɪ ᴠᴇʀꜱɪᴏɴ ➟ 1.0.0 ᴠ ⚡
-💝  ᴅᴇᴘʟᴏʏ ᴘʟᴀᴛꜰʀᴏᴍ ➟ Heroku ❲ ꜰʀᴇᴇ ❳ ⚡
-💝  ᴍɪɴɪ ʙᴏᴛ ᴏᴡɴᴇʀ ➟ 94785316830⚡
-╰────◅●💗●▻────➢
+╭──────༻༒༺────➣
+│  ʙᴏᴛ ᴜᴘ ᴛɪᴍᴇ ➟ ${hours}h ${minutes}m ${seconds}s ⚡
+│  ʙᴏᴛᴀᴄᴛɪᴠᴇ ᴄᴏᴜɴᴛ ➟ ${activeSockets.size} ⚡
+│  ᴍɪɴɪ ᴠᴇʀꜱɪᴏɴ ➟ 1.0.0 ᴠ ⚡
+│  ᴅᴇᴘʟᴏʏ ᴘʟᴀᴛꜰʀᴏᴍ ➟ Heroku ❲ ꜰʀᴇᴇ ❳ ⚡
+│  ᴍɪɴɪ ʙᴏᴛ ᴏᴡɴᴇʀ ➟ 94774755492⚡
+╰────◅༻༒༺────➢
 
 
-*➟
-
-◅𝙃𝙖𝙫𝙚 𝙖 𝙣𝙞𝙘𝙚 𝙙𝙖𝙮.. 👨‍🔧❤️▻
-*
-> ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥
+* ʜʏ ɪ'ᴍ ᴀʟɪᴠᴇ ɴᴏᴡ *
+> ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥
 `;
 
     const templateButtons = [
         {
             buttonId: `${config.PREFIX}menu`,
-            buttonText: { displayText: '❲ 𝘔𝘌𝘕𝘜 👻 ❳' },
+            buttonText: { displayText: '❲ 𝗠𝗘𝗡𝗨 ❳' },
             type: 1,
         },
         {
             buttonId: `${config.PREFIX}owner`,
-            buttonText: { displayText: ' ❲ 𝘖𝘞𝘕𝘌𝘙 👻 ❳' },
+            buttonText: { displayText: ' ❲ 𝗢𝗪𝗡𝗘𝗥 ❳' },
             type: 1,
         }, 
                     {
             buttonId: 'action',
             buttonText: {
-                displayText: ' ◅ ❤️👨‍🔧ᴍᴇɴᴜ ᴏᴘᴄᴛɪᴏɴꜱ ▻'
+                displayText: ' ◅ ᴍᴇɴᴜ ᴏᴘᴄᴛɪᴏɴꜱ ▻'
             },
             type: 4,
             nativeFlowInfo: {
@@ -498,17 +495,17 @@ socket.downloadAndSaveMediaMessage = async(message, filename, attachExtension = 
                     title: 'TAB-AND-SELECTION ❕',
                     sections: [
                         {
-                            title: `ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥`,
+                            title: `ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥`,
                             highlight_label: '',
                             rows: [
                                 {
-                                    title: '❲ 𝘔𝘌𝘕𝘜  👻 ❳',
+                                    title: '❲ 𝗠𝗘𝗡𝗨 ❳',
                                     description: '',
                                     id: `${config.PREFIX}menu`,
                                 },
                                 {
-                                    title: '❲ 𝘖𝘞𝘕𝘌𝘙 👻 ❳',
-                                    description: 'ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥',
+                                    title: '❲ 𝗢𝗪𝗡𝗘𝗥 ❳',
+                                    description: 'ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥',
                                     id: `${config.PREFIX}owner`,
                                 },
                             ],
@@ -524,7 +521,7 @@ socket.downloadAndSaveMediaMessage = async(message, filename, attachExtension = 
         headerType: 1,
         viewOnce: true,
         image: { url: "https://i.ibb.co/TxSd6pSP/dt.png" },
-        caption: `ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥\n\n${captionText}`,
+        caption: `ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥\n\n${captionText}`,
     }, { quoted: msg });
 
     break;
@@ -534,8 +531,8 @@ socket.downloadAndSaveMediaMessage = async(message, filename, attachExtension = 
 case 'settings':
 case 'setting': {
     const adminNumbers = [
-        '94704198014', // bot owner
-        // '94712345678', // admin
+        '94774755492', // bot owner
+        // '94767054052', // admin
     ];
     const botNumber = socket.user.id.split(':')[0];
     if (![botNumber, ...adminNumbers].includes(senderNumber)) {
@@ -558,14 +555,14 @@ case 'setting': {
     const emojiMap = {
 		PREFIX: '🔑',
         AUTO_VIEW_STATUS: '👀',
-        AUTO_LIKE_STATUS: '❤️',
+        AUTO_LIKE_STATUS: '👾',
         AUTO_RECORDING: '🎙️',
-        AUTO_LIKE_EMOJI: '😻'
+        AUTO_LIKE_EMOJI: '💙'
         
     };
 
     // Helper to format ON/OFF
-    const onOff = v => v === true || v === 'true' ? '🟢 ON' : '🔴 OFF';
+    const onOff = v => v === true || v === 'true' ? '🔋 ON' : '🪫 OFF';
 
     // Build the settings text
     let settingsText = `╭━━━[ *🛠️ Your Settings* ]━━━⬣\n`;
@@ -583,7 +580,7 @@ case 'setting': {
 
     settingsText += `╰━━━━━━━━━━━━━━━━━━⬣\n`;
 	settingsText += `Usage: .set <key> <value>\nExample: .set AUTO_LIKE_STATUS true\n`;
-	settingsText += `> *𝛲𝛩𝑊𝛯𝑅𝐷 𝐵𝑌 ＧIᗰ𝛥𝛥*`;
+	settingsText += `> *𝛲𝛩𝑊𝛯𝑅𝐷 𝐵𝑌 ₭₳VłĐɄ*`;
 
     await socket.sendMessage(m.chat, { react: { text: '⚙️', key: msg.key } });
     await socket.sendMessage(sender, { text: settingsText }, { quoted: msg });
@@ -592,8 +589,8 @@ case 'setting': {
 case 'set': {
     // Only allow the bot number to edit configs
     const adminNumbers = [
-      '94704198014', // bot owner
-      //'94712345678', // admin
+      '94774755492', // bot owner
+      //'94767054052', // admin
     ];
     const botNumber = socket.user.id.split(':')[0];
     if (![botNumber, ...adminNumbers].includes(senderNumber)) {
@@ -631,46 +628,45 @@ case 'set': {
 
     
     const captionText = `
-❲ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥❳
+❲ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥❳
 
 
-║▻ 𝙏𝙝𝙞𝙨 𝙞𝙨 𝙢𝙮 𝙢𝙚𝙣𝙪 𝙡𝙞𝙨𝙩 ◅║
+┌────🄱🄾🅃🄼🄴🄽🅄─────➣*
+│𝘽𝙊𝙏 𝙐𝙋 𝙏𝙄𝙈𝙀 ➟ ${hours}h ${minutes}m ${seconds}s*
+│𝘽𝙊𝙏𝘼𝘾𝙏𝙄𝙑𝙀 𝘾𝙊𝙐𝙉𝙏 ➟ *${activeSockets.size}*
+│𝙈𝙄𝙉𝙄 𝙑𝙀𝙍𝙎𝙄𝙊𝙉 ➟ 1.0.0 ᴠ*
+│𝙍𝘼𝙈 𝙐𝙎𝙀𝙂𝙀 ➟ 362520/320 GB*
+│𝘿𝙀𝙋𝙇𝙊𝙔 𝙋𝙇𝘼𝙏𝙁𝙍𝙊𝙈 ➟ Heroku ❲ꜰʀᴇᴇ❳*
+│𝙈𝙄𝙉𝙄 𝘽𝙊𝙏 𝙊𝙒𝙉𝙀𝙍 ➟ 94774755492*
+└─────────➣*
 
-╭────◅●👾●▻────➣
-💝  ʙᴏᴛ ᴜᴘ ᴛɪᴍᴇ ➟ ${hours}h ${minutes}m ${seconds}s 
-💝 ʙᴏᴛᴀᴄᴛɪᴠᴇ ᴄᴏᴜɴᴛ ➟ ${activeSockets.size} 
-💝 ᴍɪɴɪ ᴠᴇʀꜱɪᴏɴ ➟ 1.0.0 ᴠ 
-💝 ᴅᴇᴘʟᴏʏ ᴘʟᴀᴛꜰʀᴏᴍ ➟ Heroku ❲ ꜰʀᴇᴇ ❳ 
-💝 ᴍɪɴɪ ʙᴏᴛ ᴏᴡɴᴇʀ ➟ 94785316830 
-╰────◅●👾●▻────➢
+> 𝙇𝙀𝙃𝘼𝙉 𝙈𝘿 𝙈𝙄𝙉𝙄 𝙈𝘼𝙄𝙉𝙈𝙀𝙉𝙐 🔰✗
 
-🛡️ 𝘼 𝙉𝙚𝙬 𝙀𝙧𝙖 𝙤𝙛 𝙒𝙝𝙖𝙩𝙨𝘼𝙥𝙥 𝘽𝙤𝙩 𝘼𝙪𝙩𝙤𝙢𝙖𝙩𝙞𝙤𝙣 
+*ＡＣＴＩＶＥ - ＦＵＬＬ- ＣＯＭＭＡＮＤ*
 
-> Owner By Yasas Dileepa💥
-
-➟
-
-
-🔧 𝘽𝙪𝙞𝙡𝙩 𝙒𝙞𝙩𝙝 ➟
-
-𝙉𝙤𝙙𝙚.𝙟𝙨 + 𝙅𝙖𝙫𝙖𝙎𝙘𝙧𝙞𝙥𝙩
-
-𝘼𝙪𝙩𝙤 𝙙𝙚𝙥𝙡𝙤𝙮 𝙖𝙣𝙙 𝙛𝙧𝙚𝙚 ❕
+ ┌─────🄱🄾🅃🄲🄼🄳🄻🄸🅂🅃───⫸
+❖│1.𝗔𝗟𝗜𝗩𝗘 
+❖│2.𝗠𝗘𝗡𝗨 
+❖│3.𝗦𝗢𝗡𝗚 
+❖│4.𝗙𝗕 
+❖│5.𝗧𝗧 
+❖│6.𝗖𝗛𝗥
+❖│7.𝗙𝗖 
+❖│8.𝗣𝗜𝗡𝗚  
+ └───────────⫸
 
 
-➟
-
-> ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥`;
+> ᴋᴀᴠɪᴅᴜ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥`;
 
     const templateButtons = [
         {
             buttonId: `${config.PREFIX}alive`,
-            buttonText: { displayText: '❲ ALIVE 👻 ❳ ' },
+            buttonText: { displayText: '❲ 𝗔𝗟𝗜𝗩𝗘👾 ❳ ' },
             type: 1,
         },
         {
             buttonId: `${config.PREFIX}owner`,
-            buttonText: { displayText: '❲ OWNER 👻❳' },
+            buttonText: { displayText: '❲ 𝗢𝗪𝗡𝗘𝗥👤 ❳' },
             type: 1,
         },
                 {
@@ -685,17 +681,17 @@ case 'set': {
                     title: '𝙏𝘼𝘽 𝙎𝙀𝘾𝙏𝙄𝙊𝙉❕',
                     sections: [
                         {
-                            title: `ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ `,
+                            title: `ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ `,
                             highlight_label: '',
                             rows: [
                                 {
                                     title: '❲ DOWNLOAD COMMANDS ⬇️ ❳',
-                                    description: 'ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥',
+                                    description: 'ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥',
                                     id: `${config.PREFIX}dmenu`,
                                 },
                                 {
                                     title: ' ❲ OWNER COMMANDS 👀 ❳',
-                                    description: 'ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥',
+                                    description: 'ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥',
                                     id: `${config.PREFIX}ownermenu`,
                                 },
                             ],
@@ -711,7 +707,7 @@ case 'set': {
         headerType: 1,
         viewOnce: true,
         image: { url: "https://i.ibb.co/TxSd6pSP/dt.png" },
-        caption: `ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ\n\n${captionText}`,
+        caption: `ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ\n\n${captionText}`,
     }, { quoted: msg });
 
     break;
@@ -726,22 +722,22 @@ case 'set': {
     
     const captionText = `
 Download Menu 
-* .song
-* .fb
-* .tiktok
+* .song🎧
+* .fb🎥
+* .tiktok🎬
 
 
-> ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥`;
+> ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥`;
 
     const templateButtons = [
         {
             buttonId: `${config.PREFIX}alive`,
-            buttonText: { displayText: '❲ ALIVE 👻 ❳ ' },
+            buttonText: { displayText: '❲ 𝗔𝗟𝗜𝗩𝗘 ❳ ' },
             type: 1,
         },
         {
             buttonId: `${config.PREFIX}owner`,
-            buttonText: { displayText: '❲ OWNER 👻❳' },
+            buttonText: { displayText: '❲ 𝗢𝗪𝗡𝗘𝗥 ❳' },
             type: 1,
         },
                 {
@@ -756,17 +752,17 @@ Download Menu
                     title: '𝙏𝘼𝘽 𝙎𝙀𝘾𝙏𝙄𝙊𝙉❕',
                     sections: [
                         {
-                            title: `ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ `,
+                            title: `ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ `,
                             highlight_label: '',
                             rows: [
                                 {
                                     title: '❲ 𝘊𝘏𝘌𝘊𝘒 𝘉𝘖𝘛 𝘚𝘛𝘈𝘛𝘜𝘚 👻 ❳',
-                                    description: 'ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥',
+                                    description: 'ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥',
                                     id: `${config.PREFIX}alive`,
                                 },
                                 {
                                     title: ' ❲ 𝘔𝘈𝘐𝘕 𝘔𝘌𝘕𝘜 𝘓𝘐𝘚𝘛 👻 ❳',
-                                    description: 'ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥',
+                                    description: 'ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥',
                                     id: `${config.PREFIX}listmenu`,
                                 },
                             ],

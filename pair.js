@@ -1024,7 +1024,7 @@ case 'fancy': {
   break;
 	}
 // SONG DOWNLOADER (Working with buffer)
-case 'song': {
+case 'song2': {
     try {
         const text = (msg.message.conversation || msg.message.extendedTextMessage?.text || '').trim();
         const query = text.split(" ").slice(1).join(" ").trim();

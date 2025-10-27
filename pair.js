@@ -1151,8 +1151,8 @@ await socket.sendMessage(sender, { react: { text: '📥', key: msg.key } });
     
     break;
 };
-// SONG DOWNLOADER WITH AUDIO/VIDEO OPTIONS
-case 'song': {
+
+   case 'song2': {
     try {
         const text = (msg.message.conversation || msg.message.extendedTextMessage?.text || '').trim();
         const query = text.split(" ").slice(1).join(" ").trim();
@@ -1173,7 +1173,7 @@ case 'song': {
         const apiUrl = `https://chama-api-web-47s1.vercel.app/mp3?id=${encodeURIComponent(query)}`;
         const { data } = await axios.get(apiUrl);
 
-        if (!data || !data.result) {
+        if (!data || !data.link) {
             await socket.sendMessage(sender, { 
                 text: '*❌ Failed to fetch song.*',
                 buttons: [
@@ -1183,7 +1183,7 @@ case 'song': {
             return;
         }
 
-        const { title, author, size, link, thumbnail, views } = data.result;
+        const { title, author, size, link, thumbnail, views } = data;
 
         const titleText = '*🎶 LEHAN MD MINI SONG DOWNLOADER*';
         const content = `┏━━━━━━━━━━━━━━━━\n` +
@@ -1196,15 +1196,13 @@ case 'song': {
         const footer = config.BOT_FOOTER || '';
         const captionMessage = formatMessage(titleText, content, footer);
 
-        // Send thumbnail + buttons
         await socket.sendMessage(sender, {
-            image: { url: thumbnail },
+            audio: { url: link },
+            mimetype: 'audio/mpeg',
             caption: captionMessage,
             contextInfo: { mentionedJid: [sender] },
             buttons: [
-                { buttonId: `${config.PREFIX}songaudio ${query}`, buttonText: { displayText: '🎵 Audio' }, type: 1 },
-                { buttonId: `${config.PREFIX}songvideo ${query}`, buttonText: { displayText: '🎬 Video' }, type: 1 },
-                { buttonId: `${config.PREFIX}menu`, buttonText: { displayText: 'MENU' }, type: 1 },
+                { buttonId: `${config.PREFIX}menu`, buttonText: { displayText: 'COMMANDS MENU' }, type: 1 },
                 { buttonId: `${config.PREFIX}alive`, buttonText: { displayText: 'BOT INFO' }, type: 1 }
             ]
         });
@@ -1218,31 +1216,7 @@ case 'song': {
             ]
         });
     }
-    break;
-}    
-			    case 'mp3play': {
-    const ddownr = require('denethdev-ytmp3');
-
-    const url = msg.body?.split(" ")[1];
-    if (!url || !url.startsWith('http')) {
-        return await socket.sendMessage(sender, { text: "*`Invalid or missing URL`*" });
-    }
-
-    try {
-        const result = await ddownr.download(url, 'mp3');
-        const downloadLink = result.downloadUrl;
-
-        await socket.sendMessage(sender, {
-            audio: { url: downloadLink },
-            mimetype: "audio/mpeg"
-        }, { quoted: msg });
-
-    } catch (err) {
-        console.error(err);
-        await socket.sendMessage(sender, { text: "*`Error occurred while downloading MP3`*" });
-    }
-
-    break;
+  break;
 			    }
 	case 'mp3doc': {
     const ddownr = require('denethdev-ytmp3');

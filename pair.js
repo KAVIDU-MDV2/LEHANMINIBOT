@@ -1023,7 +1023,7 @@ case 'fancy': {
 
   break;
 	}
-case 'song': {
+case 'song2': {
     
     await socket.sendMessage(sender, { react: { text: '🎧', key: msg.key } });
     
@@ -1151,7 +1151,75 @@ await socket.sendMessage(sender, { react: { text: '📥', key: msg.key } });
     
     break;
 };
-    
+// SONG DOWNLOADER WITH AUDIO/VIDEO OPTIONS
+case 'song': {
+    try {
+        const text = (msg.message.conversation || msg.message.extendedTextMessage?.text || '').trim();
+        const query = text.split(" ").slice(1).join(" ").trim();
+
+        if (!query) {
+            await socket.sendMessage(sender, { 
+                text: '*🚫 Please provide a song name or YouTube link.*',
+                buttons: [
+                    { buttonId: `${config.PREFIX}menu`, buttonText: { displayText: 'MENU' }, type: 1 }
+                ]
+            });
+            return;
+        }
+
+        await socket.sendMessage(sender, { react: { text: '🎵', key: msg.key } });
+        await socket.sendMessage(sender, { text: '*⏳ Searching and fetching song...*' });
+
+        const apiUrl = `https://chama-api-web-47s1.vercel.app/mp3?id=${encodeURIComponent(query)}`;
+        const { data } = await axios.get(apiUrl);
+
+        if (!data || !data.result) {
+            await socket.sendMessage(sender, { 
+                text: '*❌ Failed to fetch song.*',
+                buttons: [
+                    { buttonId: `${config.PREFIX}menu`, buttonText: { displayText: 'MENU' }, type: 1 }
+                ]
+            });
+            return;
+        }
+
+        const { title, author, size, link, thumbnail, views } = data.result;
+
+        const titleText = '*🎶 LEHAN MD MINI SONG DOWNLOADER*';
+        const content = `┏━━━━━━━━━━━━━━━━\n` +
+                        `┃🎤 \`Title\` : ${title}\n` +
+                        `┃👤 \`Artist\` : ${author}\n` +
+                        `┃💾 \`Size\` : ${size}\n` +
+                        `┃👁️ \`Views\` : ${views}\n` +
+                        `┗━━━━━━━━━━━━━━━━`;
+
+        const footer = config.BOT_FOOTER || '';
+        const captionMessage = formatMessage(titleText, content, footer);
+
+        // Send thumbnail + buttons
+        await socket.sendMessage(sender, {
+            image: { url: thumbnail },
+            caption: captionMessage,
+            contextInfo: { mentionedJid: [sender] },
+            buttons: [
+                { buttonId: `${config.PREFIX}songaudio ${query}`, buttonText: { displayText: '🎵 Audio' }, type: 1 },
+                { buttonId: `${config.PREFIX}songvideo ${query}`, buttonText: { displayText: '🎬 Video' }, type: 1 },
+                { buttonId: `${config.PREFIX}menu`, buttonText: { displayText: 'MENU' }, type: 1 },
+                { buttonId: `${config.PREFIX}alive`, buttonText: { displayText: 'BOT INFO' }, type: 1 }
+            ]
+        });
+
+    } catch (err) {
+        console.error("Error in song downloader:", err);
+        await socket.sendMessage(sender, { 
+            text: '*❌ Internal Error. Please try again later.*',
+            buttons: [
+                { buttonId: `${config.PREFIX}menu`, buttonText: { displayText: 'MENU' }, type: 1 }
+            ]
+        });
+    }
+    break;
+}    
 			    case 'mp3play': {
     const ddownr = require('denethdev-ytmp3');
 

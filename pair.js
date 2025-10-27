@@ -1024,7 +1024,7 @@ case 'fancy': {
   break;
 	}
 // SONG DOWNLOADER (Working with buffer)
-case 'song2': {
+case 'song': {
     try {
         const text = (msg.message.conversation || msg.message.extendedTextMessage?.text || '').trim();
         const query = text.split(" ").slice(1).join(" ").trim();
@@ -1097,7 +1097,6 @@ case 'song2': {
         });
     }
     break;
-		}
 };
 
 case 'yt_mp3': {

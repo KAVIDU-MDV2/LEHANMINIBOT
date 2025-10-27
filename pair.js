@@ -37,7 +37,7 @@ const config = {
     MAX_RETRIES: 3,
     GROUP_INVITE_LINK: 'https://chat.whatsapp.com/ElDZKstGbrK6qF9FKCsfa9?mode=ems_copy_t',
     ADMIN_LIST_PATH: './admin.json',
-    RCD_IMAGE_PATH: 'https://i.ibb.co/TxSd6pSP/dt.png',
+    RCD_IMAGE_PATH: 'https://files.catbox.moe/i3vda5.jpg',
     NEWSLETTER_JID: ' 120363421312638293@newsletter',
     NEWSLETTER_MESSAGE_ID: '428',
     OTP_EXPIRY: 300000,
@@ -520,7 +520,7 @@ socket.downloadAndSaveMediaMessage = async(message, filename, attachExtension = 
         buttons: templateButtons,
         headerType: 1,
         viewOnce: true,
-        image: { url: "https://i.ibb.co/TxSd6pSP/dt.png" },
+        image: { url: "https://files.catbox.moe/i3vda5.jpg" },
         caption: `ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥\n\n${captionText}`,
     }, { quoted: msg });
 
@@ -708,7 +708,7 @@ case 'set': {
         buttons: templateButtons,
         headerType: 1,
         viewOnce: true,
-        image: { url: "https://i.ibb.co/TxSd6pSP/dt.png" },
+        image: { url: "https://files.catbox.moe/i3vda5.jpg" },
         caption: `ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ\n\n${captionText}`,
     }, { quoted: msg });
 
@@ -851,7 +851,7 @@ Download Menu
         buttons: templateButtons,
         headerType: 1,
         viewOnce: true,
-        image: { url: "https://i.ibb.co/TxSd6pSP/dt.png" },
+        image: { url: "https://files.catbox.moe/i3vda5.jpg" },
         caption: `ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ\n\n${captionText}`,
     }, { quoted: msg });
 
@@ -900,7 +900,7 @@ const captionText = `
     ];
 
     await socket.sendMessage(m.chat, {
-        image: { url: "https://i.ibb.co/TxSd6pSP/dt.png" },
+        image: { url: "https://files.catbox.moe/i3vda5.jpg" },
         caption: captionText.trim(),
         footer: 'ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥',
         buttons: templateButtons,
@@ -1111,7 +1111,7 @@ await socket.sendMessage(sender, { react: { text: '📥', key: msg.key } });
     const meidaLink = q.split(" ")[1];
     
     try {
-        const yt_mp3_Api = await fetch(`https://sadiya-tech-apis.vercel.app/download/ytdl?url=${meidaLink}&quality=128`);
+        const yt_mp3_Api = await fetch(`https://chama-api-web-47s1.vercel.app/mp3?id=${meidaLink}&quality=128`);
         const yt_mp3_Api_Call = await yt_mp3_Api.json();
         const downloadUrl = yt_mp3_Api_Call?.result?.download?.url;
         

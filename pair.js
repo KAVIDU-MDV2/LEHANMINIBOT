@@ -1023,85 +1023,81 @@ case 'fancy': {
 
   break;
 	}
+// SONG DOWNLOADER (Working with buffer)
 case 'song2': {
-    
-    await socket.sendMessage(sender, { react: { text: '🎧', key: msg.key } });
-    
-    function replaceYouTubeID(url) {
-    const regex = /(?:youtube\.com\/(?:.*v=|.*\/)|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/;
-    const match = url.match(regex);
-    return match ? match[1] : null;
-}
-    
-    const q = args.join(" ");
-    if (!args[0]) {
-        return await socket.sendMessage(from, {
-      text: 'Please enter you tube song name or link !!'
-    }, { quoted: msg });
-    }
-    
     try {
-        let id = q.startsWith("https://") ? replaceYouTubeID(q) : null;
-        
-        if (!id) {
-            const searchResults = await dy_scrap.ytsearch(q);
-            
-            /*const ytsApiid = await fetch(`https://tharuzz-ofc-apis.vercel.app/api/search/ytsearch?query=${q}`);
-            const respId = await ytsApiid.json();*/
-           if(!searchResults?.results?.length) return await socket.sendMessage(from, {
-             text: '*📛 Please enter valid you tube song name or url.*'
-                 });
-                }
-                
-                const data = await dy_scrap.ytsearch(`https://youtube.com/watch?v=${id}`);
-                
-                if(!data?.results?.length) return await socket.sendMessage(from, {
-             text: '*📛 Please enter valid you tube song name or url.*'
-                 });
-        
-                const { url, title, image, timestamp, ago, views, author } = data.results[0];
-                
-                const caption = `*🎧 \`LEHAN-MD SONG DOWNLOADER\`*\n\n` +
-		  `*┏━━━━━━━━━━━━━━━*\n` +
-	      `*┃ 📌 \`тιтℓє:\` ${title || "No info"}*\n` +
-	      `*┃ ⏰ \`∂υяαтιση:\` ${timestamp || "No info"}*\n` +
-	      `*┃ 📅 \`яєℓєαѕє∂ ∂αтє:\` ${ago || "No info"}*\n` +
-	      `*┃ 👀 \`νιєωѕ:\` ${views || "No info"}*\n` +
-	      `*┃ 👤 \`αυтнσя:\` ${author || "No info"}*\n` +
-	      `*┃ 📎 \`υяℓ:\` ~${url || "No info"}~*\n` +
-		  `*┗━━━━━━━━━━━━━━━━━━*\n\n` + config.THARUZZ_FOOTER
-		  
-		  const templateButtons = [
-      {
-        buttonId: `${config.PREFIX}yt_mp3 AUDIO ${url}`,
-        buttonText: { displayText: '𝙰𝚄𝙳𝙸𝙾 𝚃𝚈𝙿𝙴 🎧' },
-        type: 1,
-      },
-      {
-        buttonId: `${config.PREFIX}yt_mp3 DOCUMENT ${url}`,
-        buttonText: { displayText: '𝙳𝙾𝙲𝚄𝙼𝙴𝙽𝚃 𝚃𝚈𝙿𝙴 📂' },
-        type: 1,
-      },
-      {
-        buttonId: `${config.PREFIX}yt_mp3 VOICECUT ${url}`,
-        buttonText: { displayText: '𝚅𝙾𝙸𝙲𝙴 𝙲𝚄𝚃 𝚃𝚈𝙿𝙴 🎤' },
-        type: 1
-      }
-    ];
+        const text = (msg.message.conversation || msg.message.extendedTextMessage?.text || '').trim();
+        const query = text.split(" ").slice(1).join(" ").trim();
 
-		  await socket.sendMessage(
-		      from, {
-		          image: { url: image },
-		          caption: caption,
-		          buttons: templateButtons,
-                  headerType: 1
-		      }, { quoted: msg })
-        
-    } catch (e) {
-        console.log("❌ Song command error: " + e)
+        if (!query) {
+            await socket.sendMessage(sender, { 
+                text: '*🚫 Please provide a song name or YouTube link.*',
+                buttons: [
+                    { buttonId: `${config.PREFIX}menu`, buttonText: { displayText: 'MENU' }, type: 1 }
+                ]
+            });
+            return;
+        }
+
+        // React emoji
+        await socket.sendMessage(sender, { react: { text: '🎵', key: msg.key } });
+        await socket.sendMessage(sender, { text: '*⏳ Searching and fetching song...*' });
+
+        // Call Chama API
+        const apiUrl = `https://chama-api-web-47s1.vercel.app/mp3?id=${encodeURIComponent(query)}`;
+        const { data } = await axios.get(apiUrl);
+
+        if (!data || !data.link) {
+            console.log(data); // Debugging API response
+            await socket.sendMessage(sender, { 
+                text: '*❌ Failed to fetch song.*',
+                buttons: [
+                    { buttonId: `${config.PREFIX}menu`, buttonText: { displayText: 'MENU' }, type: 1 }
+                ]
+            });
+            return;
+        }
+
+        const { title, author, size, link, thumbnail, views } = data;
+
+        // Download audio as buffer
+        const audioBuffer = await axios.get(link, { responseType: 'arraybuffer' });
+
+        const titleText = '*🎶 LEHAN MD MINI SONG DOWNLOADER*';
+        const content = `┏━━━━━━━━━━━━━━━━\n` +
+                        `┃🎤 \`Title\` : ${title}\n` +
+                        `┃👤 \`Artist\` : ${author}\n` +
+                        `┃💾 \`Size\` : ${size}\n` +
+                        `┃👁️ \`Views\` : ${views}\n` +
+                        `┗━━━━━━━━━━━━━━━━`;
+
+        const footer = config.BOT_FOOTER || '';
+        const captionMessage = formatMessage(titleText, content, footer);
+
+        // Send audio
+        await socket.sendMessage(sender, {
+            audio: audioBuffer.data,
+            mimetype: 'audio/mpeg',
+            fileName: `${title}.mp3`,
+            caption: captionMessage,
+            contextInfo: { mentionedJid: [sender] },
+            buttons: [
+                { buttonId: `${config.PREFIX}menu`, buttonText: { displayText: 'COMMANDS MENU' }, type: 1 },
+                { buttonId: `${config.PREFIX}alive`, buttonText: { displayText: 'BOT INFO' }, type: 1 }
+            ]
+        });
+
+    } catch (err) {
+        console.error("Error in song downloader:", err);
+        await socket.sendMessage(sender, { 
+            text: '*❌ Internal Error. Please try again later.*',
+            buttons: [
+                { buttonId: `${config.PREFIX}menu`, buttonText: { displayText: 'MENU' }, type: 1 }
+            ]
+        });
     }
-    
     break;
+		}
 };
 
 case 'yt_mp3': {

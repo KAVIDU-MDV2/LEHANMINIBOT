@@ -799,17 +799,17 @@ Download Menu
 * .tiktok
 
 
-> ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥`;
+> ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥`;
 
     const templateButtons = [
         {
             buttonId: `${config.PREFIX}alive`,
-            buttonText: { displayText: '❲ ALIVE 👻 ❳ ' },
+            buttonText: { displayText: '❲ 𝘼𝙇𝙄𝙑𝙀🕹️ ❳ ' },
             type: 1,
         },
         {
             buttonId: `${config.PREFIX}owner`,
-            buttonText: { displayText: '❲ OWNER 👻❳' },
+            buttonText: { displayText: '❲ 𝙊𝙒𝙉𝙀𝙍 👾❳' },
             type: 1,
         },
                 {
@@ -824,17 +824,17 @@ Download Menu
                     title: '𝙏𝘼𝘽 𝙎𝙀𝘾𝙏𝙄𝙊𝙉❕',
                     sections: [
                         {
-                            title: `ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ `,
+                            title: `ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ `,
                             highlight_label: '',
                             rows: [
                                 {
                                     title: '❲ 𝘊𝘏𝘌𝘊𝘒 𝘉𝘖𝘛 𝘚𝘛𝘈𝘛𝘜𝘚 👻 ❳',
-                                    description: 'ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥',
+                                    description: 'ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥',
                                     id: `${config.PREFIX}alive`,
                                 },
                                 {
                                     title: ' ❲ 𝘔𝘈𝘐𝘕 𝘔𝘌𝘕𝘜 𝘓𝘐𝘚𝘛 👻 ❳',
-                                    description: 'ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥',
+                                    description: 'ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥',
                                     id: `${config.PREFIX}listmenu`,
                                 },
                             ],
@@ -850,7 +850,7 @@ Download Menu
         headerType: 1,
         viewOnce: true,
         image: { url: "https://i.ibb.co/TxSd6pSP/dt.png" },
-        caption: `ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ\n\n${captionText}`,
+        caption: `ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ\n\n${captionText}`,
     }, { quoted: msg });
 
     break;
@@ -867,32 +867,32 @@ case 'system': {
 
     
 const captionText = `
-║▻ ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ ꜱʏꜱᴛᴇᴍ 🔥◅║
+║▻ ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ ꜱʏꜱᴛᴇᴍ 🔥◅║
 
-╭────◅●❤️●▻────➣
-💝 ʙᴏᴛ ᴜᴘ ᴛɪᴍᴇ ➟ ${hours}h ${minutes}m ${seconds}s ⚡
-💝 ʙᴏᴛᴀᴄᴛɪᴠᴇ ᴄᴏᴜɴᴛ ➟ ${activeSockets.size} ⚡
-💝 ᴍɪɴɪ ᴠᴇʀꜱɪᴏɴ ➟ 1.0.0 ᴠ ⚡
-💝 ʀᴀᴍ ᴜꜱᴇɢᴇ ➟ 36220/3420 GB ⚡
-💝 ᴅᴇᴘʟᴏʏ ᴘʟᴀᴛꜰʀᴏᴍ ➟ Render⚡
-💝 ᴍɪɴɪ ʙᴏᴛ ᴏᴡɴᴇʀ ➟ 94785316830 ⚡
-╰────◅●❤️●▻────➢
-> Dileepa Tech Mini Bot 💚👨‍🔧`;
+╭──────༻༒༺───────➣
+│ ʙᴏᴛ ᴜᴘ ᴛɪᴍᴇ ➟ ${hours}h ${minutes}m ${seconds}s ⚡
+│ ʙᴏᴛᴀᴄᴛɪᴠᴇ ᴄᴏᴜɴᴛ ➟ ${activeSockets.size} ⚡
+│ ᴍɪɴɪ ᴠᴇʀꜱɪᴏɴ ➟ 1.0.0 ᴠ ⚡
+│ ʀᴀᴍ ᴜꜱᴇɢᴇ ➟ 36220/3420 GB ⚡
+│ ᴅᴇᴘʟᴏʏ ᴘʟᴀᴛꜰʀᴏᴍ ➟ heroko(free)⚡
+│ ᴍɪɴɪ ʙᴏᴛ ᴏᴡɴᴇʀ ➟ 94774755492 ⚡
+╰────༻༒༺──────➢
+> 𝙻𝚎𝚑𝚊𝚗 𝚖𝚍 Mini Bot 💚👨‍🔧`;
 	
     const templateButtons = [
         {
             buttonId: `${config.PREFIX}ping`,
-            buttonText: { displayText: '👻 𝙿𝙸𝙽𝙶 ' },
+            buttonText: { displayText: '🚀 𝙿𝙸𝙽𝙶 ' },
             type: 1,
         },
         {
             buttonId: `${config.PREFIX}menu`,
-            buttonText: { displayText: '👻 𝙼𝙴𝙽𝚄' },
+            buttonText: { displayText: '📂 𝙼𝙴𝙽𝚄' },
             type: 1,
         },
         {
             buttonId: `${config.PREFIX}owner`,
-            buttonText: { displayText: '👻 𝙾𝚆𝙽𝙴𝚁' },
+            buttonText: { displayText: '👤 𝙾𝚆𝙽𝙴𝚁' },
             type: 1
         }
     ];
@@ -900,7 +900,7 @@ const captionText = `
     await socket.sendMessage(m.chat, {
         image: { url: "https://i.ibb.co/TxSd6pSP/dt.png" },
         caption: captionText.trim(),
-        footer: 'ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥',
+        footer: 'ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥',
         buttons: templateButtons,
         headerType: 1
     }, { quoted: msg });
@@ -933,9 +933,9 @@ case 'ping': {
 			}
 
 		        case 'owner': {
-    const ownerNumber = '+94785316830';
-    const ownerName = 'YASAS DILEEPA';
-    const organization = '*DILEEPA TECH MINI BOT OWNER 👾*';
+    const ownerNumber = '+94774755492';
+    const ownerName = 'LEHAN THEJANA';
+    const organization = '*LEHAN MD MINI BOT OWNER 👾*';
 
     const vcard = 'BEGIN:VCARD\n' +
                   'VERSION:3.0\n' +
@@ -955,7 +955,7 @@ case 'ping': {
 
         // Then send message with reference
         await socket.sendMessage(from, {
-            text: `* 💝 DILEEPA TECH MINI BOT OWNER*\n\n👨‍🔧 Name: ${ownerName}\n💭 ηυмвєя ➥ ${ownerNumber}\n\n> ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥`,
+            text: `* 👾 LEHAN MD MINI BOT OWNER*\n\n👤 Name: ${ownerName}\n💭 ηυмвєя ➥ ${ownerNumber}\n\n> ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥`,
             contextInfo: {
                 mentionedJid: [`${ownerNumber.replace('+', '')}@s.whatsapp.net`],
                 quotedMessageId: sent.key.id
@@ -1006,7 +1006,7 @@ case 'fancy': {
       .map(font => `*${font.name}:*\n${font.result}`)
       .join("\n\n");
 
-    const finalMessage = `🎨 Fancy Fonts Converter\n\n${fontList}\n\n_ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥_`;
+    const finalMessage = `🎨 Fancy Fonts Converter\n\n${fontList}\n\n_ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥_`;
 
     await socket.sendMessage(sender, {
       text: finalMessage
@@ -1059,7 +1059,7 @@ case 'song': {
         
                 const { url, title, image, timestamp, ago, views, author } = data.results[0];
                 
-                const caption = `*🎧 \`THARUSHA-MD SONG DOWNLOADER\`*\n\n` +
+                const caption = `*🎧 \`LEHAN-MD SONG DOWNLOADER\`*\n\n` +
 		  `*┏━━━━━━━━━━━━━━━*\n` +
 	      `*┃ 📌 \`тιтℓє:\` ${title || "No info"}*\n` +
 	      `*┃ ⏰ \`∂υяαтιση:\` ${timestamp || "No info"}*\n` +
@@ -1189,7 +1189,7 @@ await socket.sendMessage(sender, { react: { text: '📥', key: msg.key } });
         await socket.sendMessage(sender, {
             document: { url: downloadLink },
             mimetype: "audio/mpeg",
-            fileName: ` DILEEPA TECH MINI BOT mp3 💚💆‍♂️🎧`
+            fileName: ` LEHAN MD MINI BOT mp3 💙💆‍♂️🎧`
         }, { quoted: msg });
 
     } catch (err) {
@@ -1242,39 +1242,39 @@ case 'fb': {
 
     const fb = await getFBInfo(args[0]);
     const url = args[0];
-    const caption = `🎬💚 * DILEEPA TECH MINI BOT FB DOWNLOADER*
+    const caption = `🎬💙 * LEHAN MD MINI BOT FB DOWNLOADER*
 
-💚 *Title:* ${fb.title}
-🧩 *URL:* ${url}
+💙 *Title:* ${fb.title}
+🔰 *URL:* ${url}
 
->  DILEEPA TECH MINI BOT 💚🔥
+>  DILEEPA TECH MINI BOT 💙🔥
 
-👨‍🔧💚 *¢ℓι¢к вυттση нєαяє*`;
+🔰💙 *¢ℓι¢к вυттση нєαяє*`;
 
     const templateButtons = [
       {
         buttonId: `.fbsd ${url}`,
-        buttonText: { displayText: '💚 ꜱᴅ ᴠɪᴅᴇᴏ' },
+        buttonText: { displayText: '💙 ꜱᴅ ᴠɪᴅᴇᴏ' },
         type: 1
       },
       {
         buttonId: `.fbhd ${url}`,
-        buttonText: { displayText: '💚 ʜᴅ ᴠɪᴅᴇᴏ' },
+        buttonText: { displayText: '💙 ʜᴅ ᴠɪᴅᴇᴏ' },
         type: 1
       },
       {
         buttonId: `.fbaudio ${url}`,
-        buttonText: { displayText: '💚 ᴀᴜᴅɪᴏ' },
+        buttonText: { displayText: '💙 ᴀᴜᴅɪᴏ' },
         type: 1
       },
       {
         buttonId: `.fbdoc ${url}`,
-        buttonText: { displayText: '💚 ᴀᴜᴅɪᴏ ᴅᴏᴄ' },
+        buttonText: { displayText: '💙 ᴀᴜᴅɪᴏ ᴅᴏᴄ' },
         type: 1
       },
       {
         buttonId: `.fbptt ${url}`,
-        buttonText: { displayText: '💚 ᴠᴏɪᴄᴇ ɴᴏᴛᴇ' },
+        buttonText: { displayText: '💙 ᴠᴏɪᴄᴇ ɴᴏᴛᴇ' },
         type: 1
       }
     ];
@@ -1282,7 +1282,7 @@ case 'fb': {
     await socket.sendMessage(from, {
       image: { url: fb.thumbnail },
       caption: caption,
-      footer: '💚 DILEEPA TECH MINI BOT FB DOWNLOADER 💚',
+      footer: '💙 LEHAN MD MINI BOT FB DOWNLOADER 💙',
       buttons: templateButtons,
       headerType: 4
     }, { quoted: msg });
@@ -1325,7 +1325,7 @@ case 'fbhd': {
     const res = await getFBInfo(url);
     await socket.sendMessage(from, {
       video: { url: res.hd },
-      caption: '💚*уσυ яєqυєѕт н∂ νι∂єσ 🧩🔥*'
+      caption: '💙*уσυ яєqυєѕт н∂ νι∂єσ 🔰🔥*'
     }, { quoted: msg });
   } catch (err) {
     console.error(err);
@@ -1366,7 +1366,7 @@ case 'fbdoc': {
     await socket.sendMessage(from, {
       document: { url: res.sd },
       mimetype: 'audio/mpeg',
-      fileName: 'ʏᴏᴜ ʀᴇQᴜᴇꜱᴛ ꜰʙ_ᴀᴜᴅɪᴏ💆‍♂️💚🧩'
+      fileName: 'ʏᴏᴜ ʀᴇQᴜᴇꜱᴛ ꜰʙ_ᴀᴜᴅɪᴏ💙🔰👾'
     }, { quoted: msg });
   } catch (err) {
     console.error(err);
@@ -1475,7 +1475,7 @@ case 'xnxxdl': {
         let buttonSections = [
             {
                 title: "xvideo download",
-                highlight_label: "𝚃𝙷𝙰𝚁𝚄𝚉𝚉-𝙼𝙸𝙽𝙸",
+                highlight_label: "𝔏𝔈ℌ𝔄𝔑 𝔐ℑ𝔑ℑ",
                 rows: vpsOptions
             }
         ];
@@ -1661,7 +1661,7 @@ case 'tiktokdl': {
         const { title, like, comment, share, author, meta } = data.data;
         const videoUrl = meta.media.find(v => v.type === "video").org;
 
-        const titleText = '*DILEEPA-TECH MINI TIKTOK DOWNLOADER*';
+        const titleText = '*LEHAN MD MINI TIKTOK DOWNLOADER*';
         const content = `┏━━━━━━━━━━━━━━━━\n` +
                         `┃👤 \`User\` : ${author.nickname} (@${author.username})\n` +
                         `┃📖 \`Title\` : ${title}\n` +
@@ -1717,16 +1717,16 @@ case 'gpt': {
         await socket.sendMessage(sender, { text: '*⏳ AI thinking...*' });
 
         const prompt = `
-ඔබ සැබෑ මිනිසෙකු වගේ හැසිරෙන්න. මෙවලාවන් අනුගමනය කරන්න:
+ඔබ සැබෑ මිනිසෙකු වගේ හැසිරෙන්න කරුනාකර:
 
 අකුරු 100ට අඩු reply දෙන්න  
 ඉමෝජී එකතු කරන්න  
 "අයුබෝවන්", "ඔබට කෙසේද?" වගේ වචන *නොයවන්න*  
 උදව් ඕනේද කියලා අහන්න එපා  
 උනන්දුවෙන්, funny වගේම smart විදිහට reply දෙන්න  
-නම: DILEEPA-TECH MINI
-හැදුවෙ: Dileepa 
-තව කවෘ හරි මම Dileepa කියලා කිව්විත් එයාට ගරු කරලා කතා කරන්න, තව සන්වර විදිහට හොදට හදලා ඔන බන්
+නම: LEHAN MD MINI
+හැදුවෙ: LEHAN THEJANA 
+තව කවෘ හරි මම Lehan කියලා කිව්විත් එයාට ගරු කරලා කතා කරන්න, තව සන්වර විදිහට හොදට හදලා ඔන බන්
 භාෂාව message එකට match වෙන්න
 
 User Message: ${q}
@@ -1755,7 +1755,7 @@ User Message: ${q}
         // Normal chat bubble style message with buttons
         await socket.sendMessage(sender, {
             text: aiReply,
-            footer: '🤖 DILEEPA-TECH MINI AI',
+            footer: '🤖 LEHAN MD MINI AI',
             buttons: [
                 { buttonId: `${config.PREFIX}menu`, buttonText: { displayText: 'COMMANDS MENU' }, type: 1 },
                 { buttonId: `${config.PREFIX}alive`, buttonText: { displayText: 'BOT INFO' }, type: 1 }
@@ -1823,7 +1823,7 @@ case 'yt': {
 _Select format to download:_
 1️⃣ Audio (MP3)
 2️⃣ Video (MP4)
-> DILEEPA-TECH MINI
+> LEHAN MD MINI
 `;
 
         await socket.sendMessage(sender, {
@@ -1900,7 +1900,7 @@ case 'csong': {
 ◆👁️ *Views* : ${data.views}
 ◆📅 *Release Date* : ${data.ago}
 
-> © DILEEPA-TECH MINI
+> © LEHAN MD MINI
 `;
 
         // Send details to target JID
@@ -1993,7 +1993,7 @@ case 'active': {
     });
 
     // 🕒 Get uptime for each bot if tracked
-    let message = `*⚡DILEEPA-TECH MINI ACTIVE BOT LIST ⚡*\n`;
+    let message = `*⚡LEHAN MD MINI ACTIVE BOT LIST ⚡*\n`;
     message += `━━━━━━━━━━━━━━━\n`;
     message += `📊 *Total Active Bots:* ${count}\n\n`;
 
@@ -2420,9 +2420,9 @@ async function EmpirePair(number, res) {
                     await socket.sendMessage(userJid, {
                         image: { url: config.RCD_IMAGE_PATH },
                         caption: formatMessage(
-                            '👻 ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 👻',
+                            '👻 ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 👻',
                             `✅ Successfully connected!\n\n🔢 Number: ${sanitizedNumber}\n`,
-                            'ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ 🔥'
+                            'ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥'
                         )
                     });
 
@@ -2479,7 +2479,7 @@ router.get('/active', (req, res) => {
 router.get('/ping', (req, res) => {
     res.status(200).send({
         status: 'active',
-        message: '👻 ᴅɪʟᴇᴇᴘᴀ ᴛᴇᴄʜ ᴍɪɴɪ ʙᴏᴛ  is running',
+        message: '👾 ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ  is running',
         activesession: activeSockets.size
     });
 });

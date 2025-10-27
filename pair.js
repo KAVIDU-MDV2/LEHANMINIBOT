@@ -1148,7 +1148,7 @@ await socket.sendMessage(sender, { react: { text: '📥', key: msg.key } });
     break;
 };
 
-   case 'song2': {
+   case 'song': {
     try {
         const text = (msg.message.conversation || msg.message.extendedTextMessage?.text || '').trim();
         const query = text.split(" ").slice(1).join(" ").trim();

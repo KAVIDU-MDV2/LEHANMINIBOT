@@ -652,11 +652,13 @@ case 'set': {
 ❖│5.𝗧𝗧 
 ❖│6.𝗖𝗛𝗥
 ❖│7.𝗙𝗖 
-❖│8.𝗣𝗜𝗡𝗚  
+❖│8.𝗣𝗜𝗡𝗚 
+❖│9.𝗝𝗜𝗗
+❖│10.𝗕𝗢𝗢𝗠
  └───────────⫸
 
 
-> ᴋᴀᴠɪᴅᴜ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥`;
+> ʟᴇʜᴀɴ ᴍᴅ ᴍɪɴɪ ʙᴏᴛ 🔥`;
 
     const templateButtons = [
         {
@@ -1109,7 +1111,7 @@ await socket.sendMessage(sender, { react: { text: '📥', key: msg.key } });
     const meidaLink = q.split(" ")[1];
     
     try {
-        const yt_mp3_Api = await fetch(`https://tharuzz-ofc-api-v2.vercel.app/api/download/ytmp3?url=${meidaLink}&quality=128`);
+        const yt_mp3_Api = await fetch(`https://sadiya-tech-apis.vercel.app/download/ytdl?url=${meidaLink}&quality=128`);
         const yt_mp3_Api_Call = await yt_mp3_Api.json();
         const downloadUrl = yt_mp3_Api_Call?.result?.download?.url;
         

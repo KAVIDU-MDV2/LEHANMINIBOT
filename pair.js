@@ -1023,7 +1023,7 @@ case 'fancy': {
 
   break;
 	}
-// SONG DOWNLOADER (Working with buffer)
+// SONG  (Working with buffer)
 case 'song2': {
     try {
         const text = (msg.message.conversation || msg.message.extendedTextMessage?.text || '').trim();
